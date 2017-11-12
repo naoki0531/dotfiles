@@ -15,7 +15,7 @@ if [[ -n "${REMOTEHOST}${SSH_CONNECTION}" ]]; then
   rhost=${rhost%%.*}
   p_host="%B%F{yellow}($rhost)%f%b:"
 fi
-local p_info="%F{green}%~%f"
+local p_info="%F{blue}%~%f"
 local p_mark="%B%(?,%F{green},%F{red})%(!,#,>)%f%b"
 
 PROMPT='${p_host}%n ${p_mark} '
