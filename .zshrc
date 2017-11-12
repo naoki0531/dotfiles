@@ -8,8 +8,16 @@ zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 
-local p_info="%m:%F{green}%~%f"
+local p_host=""
+if [[ -n "${REMOTEHOST}${SSH_CONNECTION}" ]]; then
+  local rhost=‘who am i|sed ’s/.*((.*)).*/1/’‘
+  rhost=${rhost#localhost:}
+  rhost=${rhost%%.*}
+  p_host="%B%F{yellow}($rhost)%f%b:"
+fi
+local p_info="${p_host}%F{green}%~%f"
 local p_mark="%B%(?,%F{green},%F{red})%(!,#,>)%f%b"
+
 PROMPT='${p_info} %n ${p_mark} '
 RPROMPT='${vcs_info_msg_0_}'
 
