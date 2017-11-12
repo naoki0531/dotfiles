@@ -1,3 +1,13 @@
+# option
+export LANG=ja_JP.UTF-8
+setopt hist_ignore_all_dups
+setopt share_history
+autoload -Uz compinit
+compinit -u
+if [ -e /usr/local/share/zsh-completions ]; then
+  fpath=(/usr/local/share/zsh-completions $fpath)
+fi
+
 # alias
 alias ls='ls -aF'
 alias ll='ls -l'
