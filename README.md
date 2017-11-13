@@ -2,5 +2,5 @@
 ## init
 
 ```
-ln -s ~/.zshrc .zshrc
+ln -s $PWD/.zshrc ~/.zshrc
 ```
