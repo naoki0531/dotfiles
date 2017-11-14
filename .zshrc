@@ -1,5 +1,7 @@
+autoload -Uz vcs_info compinit
+compinit
+
 # prompt
-autoload -Uz vcs_info
 setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
@@ -23,6 +25,10 @@ RPROMPT='${p_info} ${vcs_info_msg_0_}'
 
 # option
 export LANG=ja_JP.UTF-8
+## cdを入力しなくてもディレクトリ名で移動できる
+setopt auto_cd
+## cd -[tab]で移動ディレクトリ履歴を表示
+setopt auto_pushd
 setopt hist_ignore_all_dups
 setopt share_history
 autoload -Uz compinit
