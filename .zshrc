@@ -55,3 +55,8 @@ alias gita='git add'
 alias gitch='git checkout'
 alias gitchb='git checkout -b'
 alias gitco='git commit -m'
+
+export PATH=$PATH:~/local/bin:~/.composer/vendor/bin
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export PATH=$HOME/.nodebrew/current/bin:$PATH
