@@ -55,3 +55,9 @@ alias gita='git add'
 alias gitch='git checkout'
 alias gitchb='git checkout -b'
 alias gitco='git commit -m'
+
+# alias docker-compose
+alias docps='docker-compose ps'
+alias docup='docker-compose up -d'
+alias docdown='docker-compose down'
+alias doce='docker-compose exec'
