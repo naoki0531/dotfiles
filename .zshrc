@@ -61,3 +61,8 @@ alias docps='docker-compose ps'
 alias docup='docker-compose up -d'
 alias docdown='docker-compose down'
 alias doce='docker-compose exec'
+
+export PATH=$PATH:~/local/bin:~/.composer/vendor/bin
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export PATH=$HOME/.nodebrew/current/bin:$PATH
